@@ -1,0 +1,164 @@
+*{
+    box-sizing: border-box;
+}
+
+/* -----------------  Pagelayout setting  -----------------*/
+
+body { 
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    margin: 0;
+} 
+
+header, nav, main, aside, section, footer{
+    border          : thin solid #777;
+    border-radius   : 0.5em; /* delete this after finish the layouting */
+    /* padding         : 0.5em;  */
+    /* margin          : 0.25em; */
+}
+
+header{
+
+}
+nav{
+
+}
+main {
+    display         : flex;  
+    flex-wrap       : wrap;
+    flex-direction  : row; 
+    justify-content : space-between;
+    align-items     : stretch;
+    align-content   : stretch;
+    min-height      : 40em;
+}
+
+aside{
+    padding         : 5px;
+    Width           : 25%;
+    float           : left;
+    display         : flex;
+    flex-wrap       : wrap;
+    flex-direction  : column;
+    justify-content : space-between;
+}
+
+section{
+    padding         : 10px;
+    width           : 75%;
+    float           : left;
+    display         : flex;
+    flex            : 1;     /*this helps two containers fit into the given space*/
+    flex-wrap       : wrap;
+    flex-direction  : column;
+    justify-content : space-between;
+    align-items     : stretch;
+    align-content   : stretch;
+}
+
+/* -----------------  Container Property Setting  -----------------*/
+div[class] {
+    border          : thin solid #88e193;
+    border-radius   : 0.5em; /* delete this after finish the layouting */
+}
+
+.top{
+    display         : flex;  
+    flex-wrap       : wrap;
+    flex-direction  : row; 
+    justify-content : space-between;
+    align-items     : stretch;
+    align-content   : stretch;
+    margin: 0;
+
+}
+
+.logo{
+    padding         : 2px;
+    width           : 15%;
+    float           : left;
+    display         : flex;
+    flex-wrap       : wrap;
+    flex-direction  : column;
+    justify-content : space-between;
+}
+
+.newChat{
+    padding         : 2px;
+    width           : 70%;
+    float           : left;
+    display         : flex;
+    flex-wrap       : wrap;
+    flex-direction  : column;
+    justify-content : space-between;
+}
+
+.newChatIcon{
+    padding         : 2px;
+    width           : 15%;
+    float           : left;
+    display         : flex;
+    flex-wrap       : wrap;
+    flex-direction  : column;
+    justify-content : space-between;
+
+    display: block;
+    vertical-align: middle;
+    stroke-width: 1.5;
+    height: 18px;
+    width: 18px;
+
+}
+
+/* -----------------  Control Media Size  -----------------/*
+
+/* Iphone */
+@media only screen and (max-width:480px) {
+    section.page, section.content {
+        display    : block;     /* override flexbox */
+        /* min-height : inherit; */
+    }
+    section.page {
+        padding    : 0.5em 0.25em 0.5em 0.25em;
+    }
+    
+    aside {
+        display    : none;      /* hide sidebar */
+    }
+    article {
+        min-height : 100em !important;      
+    }
+  
+    nav {
+        display    : block;     
+    }
+}
+
+/* I-Pad */
+@media only screen and (max-width:768px) {
+    section.page, section.content {
+        display    : block;     /* override flexbox */
+        min-height : inherit;
+    }
+    section.page {
+        padding    : 0.5em 0.25em 0.5em 0.25em;
+    }
+
+    aside {
+        display    : none;      /* hide sidebar */
+    }
+    article {
+        min-height : 30em;
+    }
+  
+    nav {
+        display    : block;     
+    }
+}
+
+/* Desktop */
+@media only screen and (max-width:1024px) {
+
+    }
