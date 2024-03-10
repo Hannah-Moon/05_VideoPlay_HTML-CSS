@@ -1,164 +1,121 @@
 *{
-    box-sizing: border-box;
-}
-
-/* -----------------  Pagelayout setting  -----------------*/
-
-body { 
-    font-family: "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
+	box-sizing: border-box;
+    padding: 0;
     margin: 0;
+}
+body{
+	background-color: #000;
+	font-family: "Noto Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
+	margin: 0;
 } 
 
-header, nav, main, aside, section, footer{
-    border          : thin solid #777;
-    border-radius   : 0.5em; /* delete this after finish the layouting */
-    /* padding         : 0.5em;  */
-    /* margin          : 0.25em; */
-}
-
 header{
-
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	padding:60px;
+	z-index: 3;
 }
-nav{
-
+header h1{
+	float: left;
+	color: white;
+	font-size: 25px;
 }
-main {
-    display         : flex;  
-    flex-wrap       : wrap;
-    flex-direction  : row; 
-    justify-content : space-between;
-    align-items     : stretch;
-    align-content   : stretch;
-    min-height      : 40em;
-}
-
-aside{
-    padding         : 5px;
-    Width           : 25%;
-    float           : left;
-    display         : flex;
-    flex-wrap       : wrap;
-    flex-direction  : column;
-    justify-content : space-between;
-}
-
-section{
-    padding         : 10px;
-    width           : 75%;
-    float           : left;
-    display         : flex;
-    flex            : 1;     /*this helps two containers fit into the given space*/
-    flex-wrap       : wrap;
-    flex-direction  : column;
-    justify-content : space-between;
-    align-items     : stretch;
-    align-content   : stretch;
-}
-
-/* -----------------  Container Property Setting  -----------------*/
-div[class] {
-    border          : thin solid #88e193;
-    border-radius   : 0.5em; /* delete this after finish the layouting */
-}
-
-.top{
-    display         : flex;  
-    flex-wrap       : wrap;
-    flex-direction  : row; 
-    justify-content : space-between;
-    align-items     : stretch;
-    align-content   : stretch;
-    margin: 0;
-
+a{
+	font-size: 16px;
+	text-decoration: none;
 }
 
 .logo{
-    padding         : 2px;
-    width           : 15%;
-    float           : left;
-    display         : flex;
-    flex-wrap       : wrap;
-    flex-direction  : column;
-    justify-content : space-between;
+	width: auto;
+	height: 10px;
 }
 
-.newChat{
-    padding         : 2px;
-    width           : 70%;
-    float           : left;
-    display         : flex;
-    flex-wrap       : wrap;
-    flex-direction  : column;
-    justify-content : space-between;
+.main-navigation{
+	float: right;
 }
-
-.newChatIcon{
-    padding         : 2px;
-    width           : 15%;
-    float           : left;
-    display         : flex;
-    flex-wrap       : wrap;
-    flex-direction  : column;
-    justify-content : space-between;
-
-    display: block;
-    vertical-align: middle;
-    stroke-width: 1.5;
-    height: 18px;
-    width: 18px;
-
+.main-navigation a{
+	color:#fff;
+	margin-left: 40px;
 }
-
-/* -----------------  Control Media Size  -----------------/*
-
-/* Iphone */
-@media only screen and (max-width:480px) {
-    section.page, section.content {
-        display    : block;     /* override flexbox */
-        /* min-height : inherit; */
-    }
-    section.page {
-        padding    : 0.5em 0.25em 0.5em 0.25em;
-    }
-    
-    aside {
-        display    : none;      /* hide sidebar */
-    }
-    article {
-        min-height : 100em !important;      
-    }
-  
-    nav {
-        display    : block;     
-    }
+.main-navigation a.active{
+	font-weight: bold;
+	border-bottom:2px solid #004fff;
 }
-
-/* I-Pad */
-@media only screen and (max-width:768px) {
-    section.page, section.content {
-        display    : block;     /* override flexbox */
-        min-height : inherit;
-    }
-    section.page {
-        padding    : 0.5em 0.25em 0.5em 0.25em;
-    }
-
-    aside {
-        display    : none;      /* hide sidebar */
-    }
-    article {
-        min-height : 30em;
-    }
-  
-    nav {
-        display    : block;     
-    }
+.btn{
+	display: inline-block;
+	color:#fff;
+	font-weight: bold;
+	padding:12px 20px;
+	border-radius: 24px;
+	background-color: #004fff;
 }
-
-/* Desktop */
-@media only screen and (max-width:1024px) {
-
-    }
+.ghost-btn{
+	background-color: transparent;
+	border:1px solid #004fff;
+}
+.text-wrap{
+	width:520px;
+	height: 100vh;
+	padding:240px 60px;
+	position: absolute;
+	right:0;
+	top:0;
+	background-color: #000;
+	z-index: 1;
+}
+.text-wrap h2{
+	color:#fff;
+	font-size: 64px;
+	line-height: 80px;
+	font-weight: bold;
+	margin-bottom:40px;
+}
+.text-wrap h3{
+	color:#fff;
+	font-size: 24px;
+	line-height: 30px;
+	margin-bottom:20px;
+}
+.text-wrap p{
+	color:#fff;
+	font-size: 16px;
+	line-height: 1.8;
+	margin-bottom:20px;
+}
+.sns-wrap{
+	position: absolute;
+	bottom:60px;
+	right:60px;
+	z-index: 3;
+}
+.icon{
+	display: inline-block;
+	width:20px;
+	height: 20px;
+	margin-left: 20px;
+	background-size: contain;
+}
+.icon-facebook{
+	background: url(../assets/icon-facebook.svg) no-repeat center;
+}
+.icon-twitter{
+	background: url(../assets/icon-twitter.svg) no-repeat center;
+}
+.icon-linkedin{
+	background: url(../assets/icon-linkedin.svg) no-repeat center;
+}
+.video-wrap{
+	position: relative;
+	width:calc( 100% - 520px );
+}
+.video-wrap video{
+	position: absolute;
+	left:50%;
+	transform: translateX(-50%);
+	height: 100vh;
+}
